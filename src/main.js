@@ -4,7 +4,9 @@ import router from './router'
 import store from './store'
 import './styles/index.less'
 import { Picker, Button } from 'vant'
-Vue.use(Picker, Button)
+import 'amfe-flexible'
+Vue.use(Picker)
+  .use(Button)
 
 Vue.config.productionTip = false
 

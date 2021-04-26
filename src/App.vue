@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!-- <router-view/> -->
+    <van-button type="primary">主要按钮</van-button>
+    <p class="text">看就看就看</p>
   </div>
 </template>
 
@@ -10,5 +12,7 @@ export default {
 }
 </script>
 <style lang="less">
-
+  .text{
+    font-size: 32px;
+  }
 </style>
