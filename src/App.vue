@@ -1,18 +1,24 @@
 <template>
   <div id="app">
-    <!-- <router-view/> -->
-    <van-button type="primary">主要按钮</van-button>
-    <p class="text">看就看就看</p>
+    <loading v-show="loadingShow" />
+    <router-view/>
   </div>
 </template>
 
 <script>
+import Loading from './components/Loading'
+import { mapState } from 'vuex'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Loading
+  },
+  computed: {
+    ...mapState(['loadingShow'])
+  }
 }
 </script>
 <style lang="less">
-  .text{
-    font-size: 32px;
-  }
+
 </style>
